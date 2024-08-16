@@ -23,7 +23,7 @@ const Home = () => {
 
   useEffect(() => {
     setFilteredHeroes(
-      allHeroes.filter((hero) =>
+      allHeroes?.filter((hero) =>
         hero.name.toLowerCase().includes(search.toLowerCase())
       )
     );
@@ -51,7 +51,7 @@ const Home = () => {
           />
         )}
         {filteredHeroes
-          .filter((hero) =>
+          ?.filter((hero) =>
             hero.name.toLowerCase().includes(search.toLowerCase())
           )
           .map((hero) => (
